@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="발신자 설정"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_marginBottom="24dp"
+            android:gravity="center" />
+
+        <!-- Profile image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/imgSettingsProfile"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/ic_default_profile"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_circle"
+                android:clipToOutline="true"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnPickSettingsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="프로필 사진 변경"
+                android:backgroundTint="#E8C200"
+                android:textColor="#3A1D1D" />
+        </LinearLayout>
+
+        <!-- Sender name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보내는 사람 이름"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etSettingsName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="예) 홍길동"
+            android:inputType="text"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Chat type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채팅 종류"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spinnerSettingsType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Room name (open chat) -->
+        <TextView
+            android:id="@+id/tvSettingsRoomLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오픈채팅방 이름"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etSettingsRoomName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="예) 스타크래프트 팬 모임"
+            android:inputType="text"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone" />
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="저장하기"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E8C200"
+            android:textColor="#3A1D1D" />
+
+    </LinearLayout>
+</ScrollView>

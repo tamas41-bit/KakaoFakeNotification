@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/drawable_ic_kakao_notification.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/drawable/ic_kakao_notification.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/drawable_bg_input.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/drawable/bg_input.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/drawable_ic_default_profile.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/drawable/ic_default_profile.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/drawable_bg_circle.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/drawable/bg_circle.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/xml_adaptive_icon.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/xml/adaptive_icon.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.kakaofake.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.kakaofake.app-main-33:/layout/activity_main.xml"
+    }
+]

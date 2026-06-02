@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KakaoFake" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#E8C200</item>
+        <item name="colorPrimaryVariant">#C9A800</item>
+        <item name="colorOnPrimary">#3A1D1D</item>
+        <item name="android:statusBarColor">#E8C200</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

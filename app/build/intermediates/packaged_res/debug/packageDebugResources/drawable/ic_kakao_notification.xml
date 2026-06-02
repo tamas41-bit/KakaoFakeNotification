@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 카카오톡 말풍선 스타일 알림 아이콘 (흰색 단색 - 안드로이드 알림용) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,2C6.48,2 2,6.02 2,11C2,13.96 3.58,16.6 6,18.26L5.5,22L9.5,19.94C10.3,20.14 11.14,20.25 12,20.25C17.52,20.25 22,16.23 22,11.25C22,6.27 17.52,2 12,2Z" />
+</vector>

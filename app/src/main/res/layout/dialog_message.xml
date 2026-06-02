@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메시지 내용"
+        android:textSize="13sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etDialogText"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_input"
+        android:padding="10dp"
+        android:hint="메시지를 입력하세요"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알림 울릴 시간"
+        android:textSize="13sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/etDialogHour"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:padding="8dp"
+            android:hint="시"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="2" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/etDialogMin"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:padding="8dp"
+            android:hint="분"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="2" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/etDialogSec"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:padding="8dp"
+            android:hint="초"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="2" />
+    </LinearLayout>
+</LinearLayout>

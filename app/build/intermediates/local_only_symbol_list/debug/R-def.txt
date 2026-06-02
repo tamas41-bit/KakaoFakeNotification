@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+drawable bg_circle
+drawable bg_input
+drawable ic_default_profile
+drawable ic_kakao_notification
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btnCancel
+id btnPickImage
+id btnSchedule
+id etHour
+id etMessage
+id etMinute
+id etRoomName
+id etSecond
+id etSenderName
+id imgProfile
+id spinnerType
+id tvRoomLabel
+id tvStatus
+layout activity_main
+mipmap ic_launcher
+string app_name
+style Theme.KakaoFake
+xml adaptive_icon

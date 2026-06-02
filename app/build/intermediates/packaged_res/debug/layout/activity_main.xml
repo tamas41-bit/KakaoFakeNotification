@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카카오톡 알림 스케줄러"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#3A1D1D"
+            android:layout_marginBottom="24dp"
+            android:gravity="center" />
+
+        <!-- Chat Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채팅 종류"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <!-- Sender Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보내는 사람 이름"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etSenderName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="예) 홍길동"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Room Name (open chat only) -->
+        <TextView
+            android:id="@+id/tvRoomLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오픈채팅방 이름"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etRoomName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="예) 스타크래프트 팬 모임"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- Message -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메시지 내용"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:hint="보낼 메시지를 입력하세요"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Profile Image -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="프로필 사진"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_default_profile"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_circle"
+                android:clipToOutline="true" />
+
+            <Button
+                android:id="@+id/btnPickImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:text="사진 선택"
+                android:backgroundTint="#E8C200"
+                android:textColor="#3A1D1D" />
+        </LinearLayout>
+
+        <!-- Time Picker -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림 울릴 시간"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/etHour"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="시"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="2" />
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="24sp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etMinute"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="분"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="2" />
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="24sp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/etSecond"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="초"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="2" />
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="알림 예약하기"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E8C200"
+            android:textColor="#3A1D1D"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="예약 취소"
+            android:backgroundTint="#CCCCCC"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:textSize="13sp"
+            android:textColor="#333333"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

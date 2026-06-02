@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:gravity="top">
+
+    <!-- 프로필 사진 -->
+    <ImageView
+        android:id="@+id/imgMsgProfile"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_default_profile"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_circle"
+        android:clipToOutline="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp" />
+
+    <!-- 말풍선 + 시간 표시 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- 말풍선 -->
+        <TextView
+            android:id="@+id/tvMessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bubble"
+            android:padding="10dp"
+            android:textColor="#222222"
+            android:textSize="15sp"
+            android:maxWidth="220dp" />
+
+        <!-- 예약 시간 표시 -->
+        <TextView
+            android:id="@+id/tvScheduledTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="11sp"
+            android:textColor="#555555" />
+    </LinearLayout>
+
+    <!-- 시간 설정 버튼 + 삭제 버튼 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp">
+
+        <!-- 시간 설정 버튼 (시계 아이콘) -->
+        <ImageButton
+            android:id="@+id/btnSetTime"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_clock"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <!-- 삭제 버튼 -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+</LinearLayout>
