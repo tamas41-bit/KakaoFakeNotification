@@ -26,25 +26,13 @@ class NotificationReceiver : BroadcastReceiver() {
         val displayName = if (isOpen && roomName.isNotBlank()) roomName else senderName
         val timeStr = SimpleDateFormat("a h:mm", Locale.KOREA).format(Date())
 
-        // 커스텀 알림 레이아웃 (잠금화면 포함 모든 곳에 프로필 사진 왼쪽 표시)
         val customView = RemoteViews(context.packageName, R.layout.notification_custom)
         customView.setTextViewText(R.id.notif_sender, displayName)
         customView.setTextViewText(R.id.notif_message, message)
         customView.setTextViewText(R.id.notif_time, timeStr)
-        if (profileBitmap != null) {
-            customView.setImageViewBitmap(R.id.notif_profile, profileBitmap)
-        } else {
-            customView.setImageViewResource(R.id.notif_profile, R.drawable.ic_default_profile)
-        }
 
         val builder = NotificationCompat.Builder(context, NotificationHelper.CHANNEL_ID)
-            .apply {
-                if (profileBitmap != null) {
-                    setSmallIcon(IconCompat.createWithBitmap(profileBitmap))
-                } else {
-                    setSmallIcon(R.drawable.ic_kakao_notification)
-                }
-            }
+            .setSmallIcon(R.drawable.ic_kakao_notification)
             .setCustomContentView(customView)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setCategory(NotificationCompat.CATEGORY_MESSAGE)
